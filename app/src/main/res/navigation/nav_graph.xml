@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navgraph"
+    app:startDestination="@id/listNoteFragment">
+    <fragment
+        android:id="@+id/listNoteFragment"
+        android:name="com.example.notes.presentation.listnotes.ListNoteFragment"
+        android:label="Notes"
+        tools:layout="@layout/fragment_list_note">
+        <action
+            android:id="@+id/action_listNoteFragment_to_addNoteFragment2"
+            app:destination="@id/addNoteFragment2"
+            app:enterAnim="@android:anim/slide_in_left" />
+        <action
+            android:id="@+id/action_listNoteFragment_to_updateNoteFragment"
+            app:destination="@id/updateNoteFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:launchSingleTop="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateNoteFragment"
+        android:name="com.example.notes.presentation.updatenote.UpdateNoteFragment"
+        android:label="Update"
+        tools:layout="@layout/fragment_update_note" >
+        <argument
+            android:name="note"
+            app:argType="com.example.notes.data.model.Note" />
+    </fragment>
+    <fragment
+        android:id="@+id/addNoteFragment2"
+        android:name="com.example.notes.presentation.addnote.AddNoteFragment"
+        android:label="Add"
+        tools:layout="@layout/fragment_add_note" />
+</navigation>
