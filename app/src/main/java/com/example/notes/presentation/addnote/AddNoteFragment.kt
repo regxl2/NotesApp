@@ -2,16 +2,15 @@ package com.example.notes.presentation.addnote
 
 import android.content.Context
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.example.notes.Notification
-import com.example.notes.databinding.FragmentAddNoteBinding
 import com.example.notes.data.model.Note
-import com.example.notes.data.model.fakeNotes
+import com.example.notes.databinding.FragmentAddNoteBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
